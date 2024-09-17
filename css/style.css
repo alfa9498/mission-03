@@ -15,10 +15,10 @@ html {
 /* Header start */
 header {
   display: flex;
-  justify-content: space-between; /* Logo di kiri, nav di kanan */
-  align-items: center; /* Vertikal tengah */
-  padding: 10px 160px; /* Padding kanan dan kiri besar */
-  color: #ff8c00; /* Warna oranye untuk teks "video" */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 160px;
+  color: #ff8c00;
   gap: 20px;
 }
 
@@ -43,7 +43,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 20px; /* Jarak antara kategori dan user icon */
+  gap: 20px;
 }
 
 .category {
@@ -59,9 +59,9 @@ nav {
   border-radius: 50%;
   object-fit: cover;
 }
-
+/* Initially hidden, shown only on mobile */
 .hamburger-menu {
-  display: none; /* Initially hidden, shown only on mobile */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   margin-right: 20px;
@@ -79,41 +79,40 @@ nav {
 @media (max-width: 768px) {
   header {
     justify-content: space-between;
-    padding: 20px 40px; /* Sesuaikan padding di layar kecil */
+    padding: 20px 40px;
   }
 
   nav {
-    display: none; /* Hide nav on small screens */
+    display: none;
   }
 
   .hamburger-menu {
-    display: flex; /* Show hamburger menu on small screens */
+    display: flex;
   }
 }
 
 /* Image Section start */
 .background-container {
-  position: relative; /* Menetapkan posisi relatif untuk positioning overlay */
-  background-image: url("/icons/image0.jpg"); /* Ganti dengan path gambar */
+  position: relative;
+  background-image: url("/icons/image0.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 160px; /* Padding sama dengan header di desktop */
+  padding: 100px 160px;
   text-align: center;
   color: white;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1440px; /* Batasi lebar maksimum */
-  margin: 0 auto; /* Pusatkan kontainer di halaman */
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 78%; /* Pastikan gambar tidak mentok */
+  width: 78%;
   gap: 20px;
 }
 
-/* Overlay Gelap */
 .background-container::before {
   content: "";
   position: absolute;
@@ -121,8 +120,8 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Warna hitam dengan opasitas 50% */
-  border-radius: 15px; /* Menyesuaikan dengan border-radius dari container */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
 }
 
 /* H1, Description, dan Button Styling */
@@ -133,7 +132,7 @@ nav {
 .background-container .input-container,
 .background-container button,
 .background-container .email-input {
-  z-index: 99999; /* Teks/Button/Input harus muncul di atas overlay */
+  z-index: 99999;
 }
 
 /* H1 Styling */
@@ -143,7 +142,7 @@ nav {
   margin-bottom: 20px;
   line-height: 1.2;
   color: #ffffff;
-  max-width: 1000px; /* Batasi lebar teks besar */
+  max-width: 1000px;
 }
 
 /* Description Styling */
@@ -151,7 +150,7 @@ nav {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #ffffff;
-  max-width: 800px; /* Batasi lebar deskripsi */
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -173,8 +172,8 @@ nav {
 /* Responsiveness */
 @media (max-width: 1024px) {
   .background-container {
-    padding: 100px 80px; /* Sesuaikan padding di layar laptop 14 inch */
-    max-width: 1100px; /* Batasi lebar pada laptop */
+    padding: 100px 80px;
+    /max-width: 1100px;
   }
 
   .background-container h1 {
@@ -193,8 +192,8 @@ nav {
 
 @media (max-width: 768px) {
   .background-container {
-    padding: 60px 20px; /* Sesuaikan padding di layar kecil */
-    max-width: 100%; /* Maksimalkan lebar di layar kecil */
+    padding: 60px 20px;
+    max-width: 100%;
   }
 
   .background-container h1 {
@@ -213,8 +212,8 @@ nav {
 
 @media (max-width: 480px) {
   .background-container {
-    padding: 40px 20px; /* Sesuaikan padding di layar kecil */
-    max-width: 70%; /* Maksimalkan lebar */
+    padding: 40px 20px;
+    max-width: 70%;
   }
 
   .background-container h1 {
@@ -236,20 +235,20 @@ nav {
 .container.menu {
   margin-top: 10px;
   display: flex;
-  justify-content: flex-start; /* Menyelaraskan konten ke kiri */
-  padding: 20 160px; /* Sesuaikan padding dengan header atau gambar */
-  max-width: 10px; /* Batasi lebar maksimum agar konten terpusat */
-  margin: 10 auto; /* Pusatkan kontainer */
+  justify-content: flex-start;
+  padding: 20 160px;
+  max-width: 10px;
+  margin: 10 auto;
 }
 
 /* Styling untuk Featured Products */
 .featured-products {
   display: flex;
-  flex-direction: column; /* Menyusun elemen secara vertikal */
-  justify-content: flex-start; /* Menyelaraskan konten ke kiri */
-  padding: 20 160px; /* Sesuaikan padding dengan header atau gambar */
-  max-width: 1190px; /* Batasi lebar maksimum agar konten terpusat */
-  margin: 0 auto; /* Pusatkan kontainer */
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20 160px;
+  max-width: 1190px;
+  margin: 0 auto;
 }
 
 .featured-products h2 {
@@ -265,8 +264,8 @@ nav {
 /* Styling untuk button-container */
 .button-container {
   display: flex;
-  gap: 20px; /* Jarak antara tombol */
-  margin-top: 20px; /* Jarak atas antara tombol dan elemen sebelumnya */
+  gap: 20px;
+  margin-top: 20px;
   margin-left: 180px;
   padding: 0;
 }
@@ -298,26 +297,26 @@ nav {
 /* Responsif untuk tampilan layar kecil */
 @media (max-width: 768px) {
   .container.menu {
-    padding: 0 20px; /* Sesuaikan padding di layar kecil */
-    flex-direction: column; /* Menyusun elemen secara vertikal */
-    justify-content: flex-start; /* Menyelaraskan konten ke kiri */
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   .featured-products h2 {
     font-size: 1.5rem;
     display: flex;
-    max-width: 1440px; /* Batasi lebar maksimum agar konten terpusat */
+    max-width: 1440px;
     margin-left: 40px;
   }
 
   .featured-products p {
     font-size: 1rem;
-    padding: 20 160px; /* Sesuaikan padding dengan header atau gambar */
-    max-width: 1440px; /* Batasi lebar maksimum agar konten terpusat */
+    padding: 20 160px;
+    max-width: 1440px;
     margin-left: 40px;
   }
 
   .button-container {
-    gap: 10px; /* Jarak tombol lebih kecil pada layar kecil */
+    gap: 10px;
     margin-left: 40px;
   }
 
@@ -326,15 +325,15 @@ nav {
     font-size: 14px;
   }
 }
-
 /* menu end */
+
 /* card start */
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Pastikan elemen berada di tengah */
+  justify-content: center;
   padding: 20px 150px;
-  gap: 10px; /* Jarak antara kartu */
+  gap: 10px;
 }
 /* Card Styling */
 .card {
@@ -343,9 +342,7 @@ nav {
   border-radius: 10px;
   overflow: hidden;
   margin: 6px;
-  width: calc(
-    33.333% - 40px
-  ); /* 3 kartu per baris di tampilan desktop, dengan jarak antar kartu */
+  width: calc(33.333% - 40px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -360,7 +357,7 @@ nav {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 15px; /* Jarak antara gambar dan konten */
+  margin-bottom: 15px;
 }
 
 .content {
@@ -423,16 +420,16 @@ p {
 /* Menata rating dan harga */
 .rating-price-container {
   display: flex;
-  justify-content: space-between; /* Mengatur rating di kiri dan harga di kanan */
+  justify-content: space-between;
   align-items: center;
-  margin: 0 20px; /* Jarak horizontal dari tepi card */
+  margin: 0 20px;
 }
 
 /* Gaya untuk rating */
 .rating {
   display: flex;
   align-items: center;
-  gap: 8px; /* Jarak antara bintang dan teks rating */
+  gap: 8px;
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -450,28 +447,24 @@ p {
 }
 
 .filled {
-  color: #ffd700; /* Warna emas untuk bintang */
+  color: #ffd700;
 }
 
 .half-filled {
-  background: linear-gradient(
-    to right,
-    #ffd700 50%,
-    #ccc 50%
-  ); /* Setengah kuning, setengah abu-abu */
+  background: linear-gradient(to right, #ffd700 50%, #ccc 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
 }
 
 .empty {
-  color: #ccc; /* Warna abu-abu untuk bintang kosong */
+  color: #ccc;
 }
 
 /* Gaya untuk teks rating */
 .text {
   font-size: 14px;
-  margin-left: 8px; /* Jarak antara bintang dan teks rating */
+  margin-left: 8px;
   color: #333;
 }
 
@@ -480,16 +473,16 @@ p {
   font-size: 16px;
   font-weight: bold;
   color: #3ecf4c;
-  margin-left: auto; /* Menyelaraskan harga ke kanan */
+  margin-left: auto;
 }
 
 /* Responsif untuk tablet */
 @media (max-width: 1024px) {
   .container {
-    padding: 10px 25px; /* Kurangi padding untuk layar tablet */
+    padding: 10px 25px;
   }
   .card {
-    width: calc(100% - 10px); /* 2 kartu per baris di tampilan tablet */
+    width: calc(100% - 10px);
   }
 }
 /* Responsif untuk hp */
@@ -518,112 +511,110 @@ p {
   }
 
   .user-info strong {
-    font-size: 14px; /* Ukuran font untuk nama di tampilan tablet */
+    font-size: 14px;
   }
 
   .user-info span {
-    font-size: 12px; /* Ukuran font untuk deskripsi di tampilan tablet */
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    width: 100%; /* 1 kartu per baris di tampilan ponsel */
+    width: 100%;
   }
 
   .card img {
-    width: 100%; /* Memastikan gambar memenuhi lebar kartu di tampilan ponsel */
+    width: 100%;
   }
 
   .instructor img {
-    width: 30px; /* Ukuran gambar di tampilan ponsel */
-    height: 30px; /* Ukuran gambar di tampilan ponsel */
+    width: 30px;
+    height: 30px;
   }
 
   .user-info strong {
-    font-size: 12px; /* Ukuran font untuk nama di tampilan ponsel */
+    font-size: 12px;
   }
 
   .user-info span {
-    font-size: 10px; /* Ukuran font untuk deskripsi di tampilan ponsel */
+    font-size: 10px;
   }
 
   h3 {
-    font-size: 14px; /* Ukuran font untuk h3 di tampilan ponsel */
+    font-size: 14px;
   }
 
   p {
-    font-size: 12px; /* Ukuran font untuk p di tampilan ponsel */
+    font-size: 12px;
   }
 }
-
 .input-container {
   position: relative;
   display: flex;
-  align-items: center; /* Tengah secara vertikal */
-  background: white; /* Latar belakang putih untuk container */
-  border-radius: 10px; /* Border-radius yang lebih bulat */
-  overflow: hidden; /* Sembunyikan overflow */
-  width: 300px; /* Lebar wadah input */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan kotak untuk estetika */
-  margin: 20px; /* Marginal untuk kontainer */
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
 }
 
-/* Email Input Styling */
 .email-input {
-  flex-grow: 1; /* Biarkan input mengambil ruang maksimal */
-  border: none; /* Tidak ada border */
-  outline: none; /* Hilangkan outline saat fokus */
-  padding: 10px 20px; /* Padding yang cukup untuk kenyamanan */
-  border-radius: 20px; /* Radius sama dengan container untuk kesinambungan visual */
-  font-size: 16px; /* Ukuran font yang sesuai */
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
   width: 100%;
 }
 
-/* Button Styling */
 .subscribe-button {
-  position: absolute; /* Posisikan secara absolut terhadap container */
-  right: 10px; /* Jarak dari sisi kanan */
-  top: 50%; /* Pusatkan tombol secara vertikal */
-  transform: translateY(-50%); /* Pusatkan tombol dengan benar */
-  height: 30px; /* Tinggi tombol lebih besar untuk aksesibilitas */
-  width: 120px; /* Lebar tombol untuk menampung teks dengan baik */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 120px;
   background-color: #ffbd3a;
   border: none;
-  border-radius: 10px; /* Radius yang membuat tombol bulat */
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold; /* Teks tebal */
+  font-weight: bold;
   text-align: center;
-  line-height: 40px; /* Menyelaraskan teks vertikal di tengah */
+  line-height: 40px;
   overflow: visible;
-  display: flex; /* Flexbox untuk penyelarasan teks */
-  align-items: center; /* Tengah secara vertikal */
-  justify-content: center; /* Tengah secara horizontal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subscribe-button:hover {
-  background-color: #e69500; /* Warna saat hover */
+  background-color: #e69500;
 }
-/* Media Query untuk Tampilan Responsif pada Layar Kecil */
+
 @media (max-width: 768px) {
   .input-container {
-    width: 90%; /* Lebar container lebih kecil untuk layar kecil */
-    margin: 10px auto; /* Mengatur margin agar lebih kecil dan center di layar kecil */
+    width: 90%;
+    margin: 10px auto;
   }
 
   .email-input {
-    padding: 8px 15px; /* Padding yang lebih kecil untuk layar kecil */
-    font-size: 14px; /* Ukuran font yang lebih kecil */
+    padding: 8px 15px;
+    font-size: 14px;
   }
 
   .subscribe-button {
     background-color: #e69500;
-    width: 70%; /* Lebar tombol 70% dari container untuk layar kecil */
-    height: 35px; /* Tinggi tombol yang lebih kecil untuk layar kecil */
-    margin-top: 10px; /* Jarak atas untuk memisahkan dari input */
-    font-size: 14px; /* Ukuran font yang lebih kecil untuk tombol */
+    width: 70%;
+    height: 35px;
+    margin-top: 10px;
+    font-size: 14px;
   }
 }
+
 /* Styling untuk menu info */
 .menu-info {
   display: flex;
@@ -718,23 +709,19 @@ details summary {
   border-bottom: 0px solid #ccc;
   margin-right: 10px;
 }
-
-/* Right arrow for closed dropdown */
 details summary::after {
-  content: "\003E"; /* Unicode for right arrow */
-  font-size: 20px; /* Adjusted font size for a thinner arrow */
+  content: "\003E";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
   margin-left: 10px;
 }
 
-/* Left arrow when dropdown is open */
 details[open] summary::after {
-  content: "\003C"; /* Unicode for left arrow */
-  font-size: px; /* Adjusted font size for a thinner arrow */
+  content: "\003C";
+  font-size: px;
   color: rgba(58, 53, 65, 0.54);
 }
 
-/* Styling the dropdown content */
 details ul {
   padding-left: 20px;
   margin-top: 10px;
@@ -745,7 +732,6 @@ details ul li {
   margin-bottom: 5px;
 }
 
-/* Media Query for Tablet and Mobile */
 @media (max-width: 768px) {
   .menu-info {
     flex-direction: column;
@@ -758,15 +744,14 @@ details ul li {
   }
 
   .table-container {
-    display: none; /* Hide the table on mobile and tablet */
+    display: none;
   }
 
   .dropdown-menu {
-    display: block; /* Show dropdown menu on mobile and tablet */
+    display: block;
   }
 }
 
-/* footer start style */
 /* Styling untuk menu info */
 .menu-info {
   display: flex;
@@ -845,10 +830,9 @@ tr:hover td {
 
 /* Dropdown styling */
 .dropdown-menu {
-  display: none; /* Hide dropdown by default */
+  display: none;
 }
 
-/* Style for summary with dropdown arrow */
 details summary {
   font-size: 18px;
   margin-bottom: 10px;
@@ -856,27 +840,24 @@ details summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px; /* Adjust padding to create space around content */
+  padding: 10px 15px;
   border-bottom: 1px solid #ccc;
-  position: relative; /* Ensure that the pseudo-element is positioned correctly */
+  position: relative;
 }
-
-/* Right arrow for closed dropdown */
 details summary::after {
-  content: "\003E"; /* Unicode for right arrow */
-  font-size: 20px; /* Adjusted font size */
+  content: "\003E";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
   margin-left: 10px;
-  position: absolute; /* Position the arrow absolutely */
-  right: 15px; /* Distance from the right edge */
+  position: absolute;
+  right: 15px;
 }
 
-/* Left arrow when dropdown is open */
 details[open] summary::after {
-  content: "\003C"; /* Unicode for left arrow */
-  font-size: 20px; /* Adjusted font size */
+  content: "\003C";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
-  right: 15px; /* Keep the same distance from the right edge */
+  right: 15px;
 }
 
 /* Styling the dropdown content */
@@ -903,11 +884,11 @@ details ul li {
   }
 
   .table-container {
-    display: none; /* Hide the table on mobile and tablet */
+    display: none;
   }
 
   .dropdown-menu {
-    display: block; /* Show dropdown menu on mobile and tablet */
+    display: block;
   }
 }
 
@@ -931,7 +912,7 @@ details ul li {
 .logo-and-info h1 {
   font-size: 24px;
   margin: 0;
-  color: #ff8c00; /* Warna oranye untuk teks "video" */
+  color: #ff8c00;
 }
 
 .logo-2 {
@@ -991,10 +972,9 @@ tr:hover td {
 
 /* Dropdown styling */
 .dropdown-menu {
-  display: none; /* Hide dropdown by default */
+  display: none;
 }
 
-/* Style for summary with dropdown arrow */
 details summary {
   font-size: 18px;
   margin-bottom: 200px;
@@ -1002,27 +982,25 @@ details summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px; /* Adjust padding to create space around content */
+  padding: 10px 15px;
   border-bottom: 1px solid #ccc;
-  position: relative; /* Ensure that the pseudo-element is positioned correctly */
+  position: relative;
 }
 
-/* Right arrow for closed dropdown */
 details summary::after {
-  content: "\003E"; /* Unicode for right arrow */
-  font-size: 20px; /* Adjusted font size */
+  content: "\003E";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
   margin-left: 10px;
-  position: absolute; /* Position the arrow absolutely */
-  right: 15px; /* Distance from the right edge */
+  position: absolute;
+  right: 15px;
 }
 
-/* Left arrow when dropdown is open */
 details[open] summary::after {
-  content: "\003C"; /* Unicode for left arrow */
-  font-size: 20px; /* Adjusted font size */
+  content: "\003C";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
-  right: 15px; /* Keep the same distance from the right edge */
+  right: 15px;
 }
 
 /* Styling the dropdown content */
@@ -1136,10 +1114,9 @@ tr:hover td {
 
 /* Dropdown styling */
 .dropdown-menu {
-  display: none; /* Hide dropdown by default */
+  display: none;
 }
 
-/* Style for summary with dropdown arrow */
 details summary {
   font-size: 18px;
   margin-bottom: 10px;
@@ -1147,30 +1124,26 @@ details summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px; /* Adjust padding to create space around content */
+  padding: 10px 15px;
   border-bottom: 1px solid #ccc;
-  position: relative; /* Ensure that the pseudo-element is positioned correctly */
+  position: relative;
 }
-
-/* Right arrow for closed dropdown */
 details summary::after {
-  content: "\003E"; /* Unicode for right arrow */
-  font-size: 20px; /* Adjusted font size */
+  content: "\003E";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
   margin-left: 10px;
-  position: absolute; /* Position the arrow absolutely */
-  right: 15px; /* Distance from the right edge */
+  position: absolute;
+  right: 15px;
 }
 
-/* Left arrow when dropdown is open */
 details[open] summary::after {
-  content: "\003C"; /* Unicode for left arrow */
-  font-size: 20px; /* Adjusted font size */
+  content: "\003C";
+  font-size: 20px;
   color: rgba(58, 53, 65, 0.54);
-  right: 15px; /* Keep the same distance from the right edge */
+  right: 15px;
 }
 
-/* Styling the dropdown content */
 details ul {
   padding-left: 20px;
   margin-top: 10px;
@@ -1194,11 +1167,11 @@ details ul li {
   }
 
   .table-container {
-    display: none; /* Hide the table on mobile and tablet */
+    display: none;
   }
 
   .dropdown-menu {
-    display: block; /* Show dropdown menu on mobile and tablet */
+    display: block;
   }
 }
 .social-icons {
@@ -1236,18 +1209,18 @@ details ul li {
 /* Media Query untuk layar kecil */
 @media (max-width: 768px) {
   .social-icons {
-    padding: 10px; /* Mengurangi padding pada layar kecil */
-    flex-direction: column; /* Memastikan ikon sosial dan teks hak cipta ditata dalam kolom */
+    padding: 10px;
+    flex-direction: column;
   }
 
   .social-icons p {
-    margin-top: 5px; /* Jarak atas untuk teks hak cipta agar berada di bawah ikon */
+    margin-top: 5px;
   }
 
   .icon-group {
     justify-content: left;
     margin-right: 170px;
-    order: -1; /* Menempatkan ikon di atas teks hak cipta */
-    margin-bottom: 10px; /* Menambahkan jarak bawah untuk memisahkan dengan teks hak cipta */
+    order: -1;
+    margin-bottom: 10px;
   }
 }
