@@ -18,7 +18,7 @@ header {
   justify-content: space-between; /* Logo di kiri, nav di kanan */
   align-items: center; /* Vertikal tengah */
   padding: 10px 160px; /* Padding kanan dan kiri besar */
-  background-color: #f4f4f4;
+  color: #ff8c00; /* Warna oranye untuk teks "video" */
   gap: 20px;
 }
 
@@ -159,20 +159,16 @@ nav {
 
 /* Button Styling */
 .background-container button {
-  background-color: #ffa500;
+  background-color: #3ecf4c;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 30px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-/* .background-container button:hover {
-  background-color: #34a142;
-  transform: scale(2.01); /* Menambahkan efek hover */
 
 /* Responsiveness */
 @media (max-width: 1024px) {
@@ -561,8 +557,6 @@ p {
   }
 }
 
-/* start style input dan button newsletter */
-/* Input Container Styling */
 .input-container {
   position: relative;
   display: flex;
@@ -594,8 +588,7 @@ p {
   transform: translateY(-50%); /* Pusatkan tombol dengan benar */
   height: 30px; /* Tinggi tombol lebih besar untuk aksesibilitas */
   width: 120px; /* Lebar tombol untuk menampung teks dengan baik */
-  background-color: rgb(114, 255, 58);
-  color: white;
+  background-color: #ffbd3a;
   border: none;
   border-radius: 10px; /* Radius yang membuat tombol bulat */
   cursor: pointer;
@@ -624,15 +617,13 @@ p {
   }
 
   .subscribe-button {
+    background-color: #e69500;
     width: 70%; /* Lebar tombol 70% dari container untuk layar kecil */
     height: 35px; /* Tinggi tombol yang lebih kecil untuk layar kecil */
     margin-top: 10px; /* Jarak atas untuk memisahkan dari input */
     font-size: 14px; /* Ukuran font yang lebih kecil untuk tombol */
   }
 }
-/* start style input dan button newsletter */
-
-/* start footer */
 /* Styling untuk menu info */
 .menu-info {
   display: flex;
@@ -940,6 +931,7 @@ details ul li {
 .logo-and-info h1 {
   font-size: 24px;
   margin: 0;
+  color: #ff8c00; /* Warna oranye untuk teks "video" */
 }
 
 .logo-2 {
@@ -1005,7 +997,7 @@ tr:hover td {
 /* Style for summary with dropdown arrow */
 details summary {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 200px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1057,11 +1049,11 @@ details ul li {
   }
 
   .table-container {
-    display: none; /* Hide the table on mobile and tablet */
+    display: none;
   }
 
   .dropdown-menu {
-    display: block; /* Show dropdown menu on mobile and tablet */
+    display: block;
   }
 }
 
@@ -1074,7 +1066,7 @@ details ul li {
   background-color: #f3f3f3;
   color: #333;
   font-family: Arial, sans-serif;
-  border-bottom: 6px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo-and-info {
@@ -1209,43 +1201,36 @@ details ul li {
     display: block; /* Show dropdown menu on mobile and tablet */
   }
 }
-
-/* Styling untuk social icons */
 .social-icons {
-  justify-content: left;
   border-top: 1px solid #ccc;
   display: flex;
-  flex-direction: column; /* Mengubah arah flex menjadi kolom */
-  align-items: flex-start; /* Menjaga semua item sejajar di tengah */
-  justify-content: flex-start;
-  padding: 10px 170px; /* Menambahkan padding untuk ruang tambahan */
-  background-color: #f3f3f3; /* Warna latar belakang opsional */
-  font-family: Arial, sans-serif; /* Font yang digunakan */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 170px;
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
 }
 
-/* Teks hak cipta */
 .social-icons p {
   margin: 0;
   font-size: 16px;
   color: #333;
-  margin-top: 10px; /* Menambahkan jarak atas untuk memisahkan dengan ikon */
+  margin-right: 20px;
 }
 
-/* Grup ikon sosial */
 .icon-group {
   display: flex;
-  gap: 10px; /* Jarak antar ikon sosial */
-  margin-bottom: 10px; /* Menambahkan jarak bawah untuk memisahkan dengan teks hak cipta */
+  gap: 10px;
 }
 
 .social-icon {
-  color: #333; /* Warna ikon sosial */
-  text-decoration: none; /* Menghapus garis bawah dari tautan */
-  font-size: 30px; /* Ukuran ikon sosial */
+  color: #333;
+  text-decoration: none;
+  font-size: 30px;
 }
 
 .social-icon:hover {
-  color: #ff5722; /* Warna saat hover pada ikon sosial */
+  color: #ff5722;
 }
 
 /* Media Query untuk layar kecil */
